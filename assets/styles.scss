@@ -3,20 +3,61 @@ title: false
 styles: true
 ---
 
-$font-stack: 'Georgia', 'serif';
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,700&display=swap');
 
-@import 'alembic';
+@font-face {
+  font-family: 'Charter';
+  src: url('/fonts/Charter\ Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Charter';
+  src: url('/fonts/Charter\ Italic.ttf');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Charter';
+  src: url('/fonts/Charter\ Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Charter';
+  src: url('/fonts/Charter\ Bold\ Italic.ttf');
+  font-weight: bold;
+  font-style: italic;
+}
+
+$font-stack: 'Charter', 'Helvetica', 'Georgia', 'serif';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  // font-family: 'Rotobo', $font-stack !important;
+}
 
 body {
-  font-family: $font-stack;
-  font-size: 17px;
+  font-family: $font-stack !important;
+  font-size: 16px;
   line-height: 28.8px;
 }
 
-.aside {
-  max-width: 25%;
-  order: -1;
-  opacity: 0.8;
+@import 'alembic';
+
+@media screen and (min-width: 40em) {
+  .aside {
+    opacity: 1;
+  }
+}
+
+.logo {
+  width: 160px;
 }
 
 .footer {
@@ -26,19 +67,55 @@ body {
 .article--post {
   display: flex;
   flex-direction: column;
-  h2 {
+  h2,
+  h3 {
+    padding-top: 10px;
     a {
       color: black;
       font-size: 1.75rem;
-      background-image: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0) 50%,
-        rgba(0, 0, 0, 0)
-      );
+      background-image: none;
+      &:hover {
+        background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0) 50%,
+          black 50%
+        );
+      }
     }
   }
   small {
     padding-top: 0rem;
     margin-bottom: 10px;
+    .label--category {
+      a {
+        background-image: none;
+        &:hover {
+          color: #05bf85;
+          background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 50%,
+            #05bf85
+          );
+        }
+      }
+    }
+  }
+}
+
+.nav--categories {
+  .list--categories {
+    .item--category {
+      a {
+        background-image: none;
+        &:hover {
+          color: #05bf85;
+          background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 50%,
+            #05bf85
+          );
+        }
+      }
+    }
   }
 }
