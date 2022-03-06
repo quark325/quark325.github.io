@@ -3,3 +3,7 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+
+#The items written below are for testing purposes only.
+_posts/2018-08-22-hello-world.md
+images/test.png
