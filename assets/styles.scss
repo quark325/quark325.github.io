@@ -1,0 +1,14 @@
+---
+title: false
+styles: true
+---
+
+$font-stack: 'Georgia', 'serif';
+
+@import 'alembic';
+
+body {
+  font-family: $font-stack;
+  font-size: 17px;
+  line-height: 28.8px;
+}
