@@ -30,7 +30,9 @@ title: 'My website'
 description: 'This is my new website'
 permalink: pretty
 logo: '/images/name_georgia.png'
+disqus: 'anbyungseo'
 google_analytics: 'G-57VBVBVWBS'
+short_name: 'anbyungseo'
 
 # Pagination
 paginate: 5
@@ -53,7 +55,7 @@ navigation_footer:
 # Collections
 collections:
   posts:
-    title: Posts
+    # title: Posts
     output: true
     # description: 'My thoughts and ideas'
     # feature_text: |
