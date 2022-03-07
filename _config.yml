@@ -30,6 +30,7 @@ title: 'My website'
 description: 'This is my new website'
 permalink: pretty
 logo: '/images/name_georgia.png'
+google_analytics: 'G-57VBVBVWBS'
 
 # Pagination
 paginate: 5
