@@ -29,7 +29,7 @@ baseurl: ''
 title: 'My website'
 description: 'This is my new website'
 permalink: pretty
-logo: '/images/name_georgia.png'
+logo: '/images/name_nanumgothic.png'
 disqus: 'anbyungseo'
 google_analytics: 'G-57VBVBVWBS'
 short_name: 'anbyungseo'

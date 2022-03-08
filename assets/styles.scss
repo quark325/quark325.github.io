@@ -32,28 +32,185 @@ styles: true
   font-style: italic;
 }
 
+$breakpoints: (
+  break-0: 0,
+  // 0px       Mobile first
+  break-1: 640,
+  // 640px   ~ Small tablet up
+  // break-2: 800,
+  // 800px   ~ Large tablet up
+  break-3: 1024,
+  // 1024px  ~ Desktop up
+  // break-4: 1600 // 1600px  ~ Large desktop up,,,,
+) !default;
+
+// Root font-sizes for each breakpoint. Set to half desired line-height of body text.
+// ! Make sure to have as many sizes as breakpoints above.
+$rootsizes: (
+  rootsize-0: 12,
+  // 24px line-height body text
+  rootsize-1: 14,
+  // 28px line-height body text
+  // rootsize-2: 15,
+  // 30px line-height body text
+  rootsize-3: 17,
+  // 34px line-height body text
+  // rootsize-4: 19 // 38px line-height body text,,,,
+) !default;
+
+// Set the optimum line-length for your text (based on typeface).
+// Aim for 75-100 characters a line when possible, at smaller sizes type size is more important.
+// ! Make sure to have as many widths as breakpoints above.
+// Note: this was 'maxwidths' in previous versions.
+$measures: (
+  measure-0: 500,
+  // 500px wide
+  measure-1: 550,
+  // 550px wide
+  // measure-2: 600,
+  // 600px wide
+  measure-3: 680,
+  // 680px wide
+  // measure-4: 750 // 750px wide,,,,
+) !default;
+
+// Set the max-widths for containers (based on design).
+// ! Make sure to have as many widths as breakpoints above.
+$maxwidths: (
+  width-0: 500,
+  // 500px wide
+  width-1: 600,
+  // 600px wide
+  // width-2: 800,
+  // 800px wide
+  width-3: 1100,
+  // 110px wide
+  // width-4: 1300 // 1300px wide,,,,
+) !default;
+
+// Gutter widths
+$gutterwidths: (
+  small: 1rem,
+  medium: 2rem,
+  large: 4rem,
+) !default;
+
+$body-font: "'Nanum Gothic', 'Charter', 'Helvetica', 'Georgia', 'serif'";
+$heading-font: "'Helvetica', 'serif'";
+
+// Background colours
+$backgroundColour: #ffffff !default;
+$codeBackgroundColour: #fafafa !default;
+$featureBackgroundColour: #f9fafa !default;
+$accentColour: #05bf85 !default;
+
+// Text colours
+$headingColour: #242e2b !default;
+$bodyColour: #384743 !default;
+$linkColour: #05bf85 !default;
+$hoverColour: #008000 !default;
+$focusColour: #fa407a !default;
+$captionColour: #a8adac !default;
+$white: #ffffff !default;
+
+// Typography
+$bodytype: (
+  font-family: $body-font,
+  regular: 400,
+  bold: 700,
+  italic: italic,
+  cap-height: 0.75,
+) !default;
+
+$headingtype: (
+  font-family: $heading-font,
+  regular: 400,
+  bold: 700,
+  cap-height: 0.75,
+) !default;
+
+$monospacetype: (
+  font-family: 'Menlo, monospace',
+  regular: 400,
+  cap-height: 0.68,
+) !default;
+
+// TIP: Load custom fonts in _config.yaml
+
+$modular-scale: (
+  // Major Third http://www.modularscale.com/?16,28&px&1.25&web&text
+  scale-0:
+    (
+      alpha: 28,
+      beta: 25,
+      gamma: 22.4,
+      delta: 20,
+      epsilon: 17.9,
+      zeta: 16,
+      eta: 14.3,
+      theta: 12.8,
+      iota: 11.5,
+    ),
+  // Major Third http://www.modularscale.com/?17,30&px&1.25&web&text
+  scale-1:
+    (
+      alpha: 30,
+      beta: 26.6,
+      gamma: 24,
+      delta: 21.3,
+      epsilon: 19.2,
+      zeta: 17,
+      eta: 15.3,
+      theta: 13.6,
+      iota: 12.8,
+    ),
+  // Major Third http://www.modularscale.com/?18,32&px&1.25&web&text
+  scale-2:
+    (
+      alpha: 32,
+      beta: 28.1,
+      gamma: 25.6,
+      delta: 22.5,
+      epsilon: 20.5,
+      zeta: 18,
+      eta: 16.3,
+      theta: 14.4,
+      iota: 13.1,
+    ),
+  // Perfect Fourth http://www.modularscale.com/?20,40&px&1.333&web&text
+  scale-3:
+    (
+      alpha: 40,
+      beta: 35.5,
+      gamma: 30,
+      delta: 26.7,
+      epsilon: 22.5,
+      zeta: 20,
+      eta: 16.9,
+      theta: 15,
+      iota: 12.7,
+    ),
+  // Aug. Fourth http://www.modularscale.com/?22,50&px&1.414&web&text
+  scale-4:
+    (
+      alpha: 50,
+      beta: 43.9,
+      gamma: 35.3,
+      delta: 31.1,
+      epsilon: 25,
+      zeta: 22,
+      eta: 17.6,
+      theta: 15.6,
+      iota: 12.5,
+    )
+) !default;
+
 @import 'alembic';
-
-$font-stack: 'Nanum Gothic', 'Charter', 'Helvetica', 'Georgia', 'serif';
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $font-stack !important;
-}
-
-body {
-  font-family: $font-stack !important;
-  font-size: 16px;
-  line-height: 28.8px;
-}
 
 @media screen and (min-width: 40em) {
   .aside {
     opacity: 1;
+    max-width: 10%;
   }
 }
 
@@ -68,7 +225,7 @@ body {
 .content {
   .article {
     h1 {
-      padding-top: 0px !important;
+      // padding-top: 0px !important;
     }
   }
 }
@@ -81,7 +238,7 @@ body {
     padding-top: 10px;
     a {
       color: black;
-      font-size: 1.75rem;
+      // font-size: 1.75rem;
       background-image: none;
       &:hover {
         background-image: linear-gradient(
@@ -127,4 +284,19 @@ body {
       }
     }
   }
+}
+
+.container {
+  width: 94%;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 40em) {
+  .content {
+    width: 850px;
+  }
+}
+
+.feature {
+  margin-bottom: 0;
 }
