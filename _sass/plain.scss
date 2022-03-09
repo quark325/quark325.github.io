@@ -7,7 +7,7 @@ $mobileW: 768px;
 $smallMobileW: 480px;
 $bigScreenW: 1600px;
 $leftWidth: 220px;
-$sideMargin: 80px;
+$sideMargin: 90px;
 
 *,
 *:before,
@@ -83,10 +83,10 @@ main {
     padding-bottom: 15vh;
     @media screen and (max-width: $mobileW) {
       height: auto;
-      padding: 5vh 30px;
+      padding: 3vh 30px;
     }
     @media screen and (max-width: $smallMobileW) {
-      padding: 5vh 20px;
+      padding: 3vh 20px;
     }
     @media screen and (min-width: $mobileW + 1) {
       position: fixed;
@@ -218,6 +218,7 @@ main {
       margin: 10px 0;
     }
   }
+  margin-bottom: 20px;
 }
 .post-link {
   text-decoration: none;
