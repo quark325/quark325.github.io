@@ -1,81 +1,60 @@
-# Set theme
-remote_theme: daviddarnes/alembic@main
+title: Your awesome title
+author: GitHub User
+email: your-email@domain.com
+description: > # this means to ignore newlines until "show_exerpts:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+show_excerpts: true # set to true to show excerpts on the homepage
 
-# File excludes
-exclude:
-  - README.md
-  - Gemfile
-  - Gemfile.lock
+# Minima date format
+# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+sass:
+  sass_dir: _sass
+plainwhite:
+  name: Adam Denisov
+  tagline: Developer. Designer
+  date_format: "%b %-d, %Y"
+  sitemap: true # set to true to generate sitemap.xml content
+  search: true # set to true to enable searchbar
+  dark_mode: true # set to true to add dark mode toggle
+  portfolio_image: "assets/portfolio.png" # the path from the base directory of the site to the image to display (no / at the start)
+  html_lang: "en" # set the lang attribute of the <html> tag for the pages. See here for a list of codes: https://www.w3schools.com/tags/ref_country_codes.asp
+  condensed_mobile:
+    #- home
+    - page
+    - post
+  # generate social links in footer
+  social_links:
+    twitter: samarsault
+    github:  samarsault
+    linkedIn: in/samarsault
+    #dribbble: jekyll
+    #flickr:   jekyll
+    #instagram: jekyll
+    #pinterest: jekyll
+    #youtube: jekyll
+    #facebook: jekyll
+    #soundcloud: jekyll
+    #telegram: jekyll
+    #gitlab: jekyll
+    #email: jekyll
 
-# Set plugins
+    # Mastodon instances
+    # mastodon:
+    # - username: jekyll
+    #   instance: example.com
+    # - username: jekyll2
+    #   instance: example.com
+
+# If you want to link only specific pages in your header, uncomment
+# this and add the path to the pages in order as they should show up
+#header_pages:
+# - about.md
+
+# Build settings
+theme: plainwhite
+
 plugins:
-  - jekyll-sitemap
-  - jekyll-mentions
-  - jekyll-paginate
   - jekyll-seo-tag
-  - jekyll-redirect-from
-  - jekyll-feed
-  - jekyll-commonmark
-  - jekyll-include-cache
-  - jemoji
-  - jekyll-remote-theme
-
-# Site settings
-encoding: utf-8 # Make sure the encoding is right
-#lang: ko # Set the site language
-
-url: 'https://quark325.github.io/'
-baseurl: ''
-title: 'My website'
-description: 'This is my new website'
-permalink: pretty
-logo: '/images/name_nanumgothic.png'
-disqus: 'anbyungseo'
-google_analytics: 'G-57VBVBVWBS'
-short_name: 'anbyungseo'
-
-# Pagination
-paginate: 5
-paginate_path: page:num
-
-# Header nav
-navigation_header:
-  - title: Posts
-    url: /
-  - title: Categories
-    url: /categories/
-  - title: Search
-    url: /search/
-
-# Footer nav
-navigation_footer:
-  - title: Back to top
-    url: '#top'
-
-# Collections
-collections:
-  posts:
-    # title: Posts
-    output: true
-    # description: 'My thoughts and ideas'
-    # feature_text: |
-    #   # Welcome to my blog
-    feature_image: '/images/about.jpeg'
-
-# Collection settings
-defaults:
-  - scope:
-      path: ''
-      type: 'posts'
-    values:
-      layout: post # Set the default layout for posts
-  - scope:
-      path: ''
-      type: 'pages'
-    values:
-      layout: page # Set the default layout for pages
-
-# sharing_links: # Appear at the bottom of single blog posts, add as desired. The value can be 'true' or the desired button colour
-#   Twitter: '#0d94e7'
-#   facebook: '#3B5998'
-#   Email: true
+#  - jekyll-feed
