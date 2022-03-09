@@ -54,7 +54,6 @@ GEM
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (4.0.6)
-    rake (12.3.3)
     rb-fsevent (0.11.1)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
@@ -72,9 +71,7 @@ PLATFORMS
   x86_64-darwin-20
 
 DEPENDENCIES
-  bundler (> 1.16)
-  plainwhite!
-  rake (~> 12.0)
+  plainwhite (~> 0.13)!
   webrick (~> 1.7)
 
 BUNDLED WITH
