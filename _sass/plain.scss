@@ -34,16 +34,18 @@ video {
 a {
   color: #000;
   transition: color 0.3s;
-  &:hover {
-    color: $linkColor;
-  }
+  // &:hover {
+  //   color: $linkColor;
+  // }
 }
 
 h2 {
   margin: 0.7em 0;
   @media screen and (max-width: $mobileW) {
     margin: 0.3em 0;
+    font-size: 24px;
   }
+  font-size: 30px;
 }
 
 main {
@@ -197,6 +199,7 @@ main {
   margin: 0;
   padding: 0;
   li {
+    color: #000;
     font-size: 14px;
     float: left;
     background-color: #e3e3e3;
@@ -245,23 +248,39 @@ main {
 }
 .posts {
   .post-list-item {
-    padding: 4px;
+    padding: 20px;
+    transition: background-color 0.3s;
     .post-title {
       line-height: 1.2em;
-      font-size: 30px;
       margin-top: 0px;
       margin-bottom: 10px;
       @media screen and (max-width: $mobileW) {
         margin-top: 10px;
       }
     }
+    .post {
+      margin-bottom: 0px;
+      p {
+        margin: 0px;
+      }
+    }
+    @media screen and (max-width: $mobileW) {
+      padding: 0px;
+    }
+  }
+  .post-list-item:hover{
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+  .post-list-item:nth-child(n+3){
+    margin-top: 20px;
+    @media screen and (max-width: $mobileW) {
+      margin-top: 40px;
+    }
   }
   .post {
     margin-top: 20px; 
   }
-  .post-list-item:nth-child(n+3){
-    margin-top: 20px;
-  }
+  
 }
 .post-container {
   padding-left: 40px;
@@ -296,10 +315,13 @@ main {
   }
 }
 .posts-labelgroup {
-  margin: 0 0 1em 0;
+  margin: 0px 20px 1em 20px;
   display: flex;
   align-items: baseline;
   border-bottom: 1px solid #eee;
+  @media screen and (max-width: $mobileW) {
+    margin: 0px 0px 1em 0px;
+  }
 }
 
 #posts-label {
