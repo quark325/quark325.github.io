@@ -46,7 +46,7 @@ plainwhite:
     # - username: jekyll2
     #   instance: example.com
 
-  disqus_shortname: 'anbyungseo'
+  disqus_shortname: anbyungseo
   analytics_id: 'G-57VBVBVWBS'
 
 # If you want to link only specific pages in your header, uncomment
