@@ -75,6 +75,17 @@ main {
   .content {
     @media screen and (min-width: $mobileW + 1) {
       max-width: calc(100% - #{$leftWidth});
+      margin-left: $leftWidth;
+      width: 100%;
+    }
+    @media screen and (min-width: 1024px) {
+      max-width: calc(100% - #{$leftWidth});
+      margin-left: $leftWidth + $sideMargin/2;
+      margin-right: $sideMargin/2;
+      width: 100%;
+    }
+    @media screen and (min-width: 1280px) {
+      max-width: calc(100% - #{$leftWidth});
       margin-left: $leftWidth + $sideMargin;
       margin-right: $sideMargin;
       width: 100%;
@@ -247,6 +258,7 @@ main {
   }
 }
 .posts {
+  padding-left: 40px;
   .post-list-item {
     padding: 20px;
     transition: background-color 0.3s;
@@ -283,7 +295,7 @@ main {
   
 }
 .post-container {
-  padding-left: 40px;
+  padding: 20px 20px 20px 60px;
 }
 .post {
   font-family: 'Nanum Gothic', 'Merriweather', sans-serif;
