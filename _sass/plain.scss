@@ -13,6 +13,7 @@ $sideMargin: 90px;
 *:before,
 *:after {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -34,6 +35,7 @@ video {
 a {
   color: #000;
   transition: color 0.3s;
+  
   // &:hover {
   //   color: $linkColor;
   // }
@@ -282,6 +284,9 @@ main {
   }
   .post-list-item:hover{
     background-color: rgba(0, 0, 0, 0.03);
+    @media screen and (max-width: $mobileW) {
+      background-color: rgba(0, 0, 0, 0);
+    }
   }
   .post-list-item:nth-child(n+3){
     margin-top: 20px;
