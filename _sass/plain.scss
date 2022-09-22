@@ -35,7 +35,7 @@ video {
 a {
   color: #000;
   transition: color 0.3s;
-  
+
   // &:hover {
   //   color: $linkColor;
   // }
@@ -208,20 +208,27 @@ main {
 }
 
 .post-categories {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   list-style-type: none;
   margin: 0;
   padding: 0;
   li {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     color: #000;
     font-size: 14px;
     float: left;
     background-color: #e3e3e3;
     padding: 5px 20px;
-    border-radius: 2px;
-    @media screen and (max-width: $mobileW) {
-      margin-top: 5px;
-    }
+    border-radius: 100px;
     margin-right: 10px;
+  }
+  @media screen and (max-width: $smallMobileW) {
+    margin-top: 8px;
   }
 }
 .post-date {
@@ -259,19 +266,21 @@ main {
     margin-top: 0;
   }
 }
+.post-title {
+  font-size: 24px;
+  line-height: 1.2em;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  @media screen and (max-width: $mobileW) {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
 .posts {
   padding-left: 40px;
   .post-list-item {
     padding: 20px;
     transition: background-color 0.3s;
-    .post-title {
-      line-height: 1.2em;
-      margin-top: 0px;
-      margin-bottom: 10px;
-      @media screen and (max-width: $mobileW) {
-        margin-top: 10px;
-      }
-    }
     .post {
       margin-bottom: 0px;
       p {
@@ -282,27 +291,27 @@ main {
       padding: 0px;
     }
   }
-  .post-list-item:hover{
+  .post-list-item:hover {
     background-color: rgba(0, 0, 0, 0.03);
     @media screen and (max-width: $mobileW) {
       background-color: rgba(0, 0, 0, 0);
     }
   }
-  .post-list-item:nth-child(n+3){
+  .post-list-item:nth-child(n + 3) {
     margin-top: 20px;
     @media screen and (max-width: $mobileW) {
-      margin-top: 40px;
+      margin-top: 50px;
     }
   }
   .post {
-    margin-top: 20px; 
+    margin-top: 20px;
   }
-  
 }
 .post-container {
   padding: 20px 20px 20px 60px;
 }
-.post {
+.post,
+.subtitle {
   font-family: 'Nanum Gothic', 'Merriweather', sans-serif;
   font-weight: 300;
   color: #111;
@@ -335,12 +344,21 @@ main {
   }
 }
 .posts-labelgroup {
-  margin: 0px 20px 1em 20px;
+  margin: 0px 20px 10px 20px;
   display: flex;
   align-items: baseline;
   border-bottom: 1px solid #eee;
   @media screen and (max-width: $mobileW) {
-    margin: 0px 0px 1em 0px;
+    margin: 0px 10px 25px 0px;
+  }
+}
+.subtitle {
+  line-height: 1.3em;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  @media screen and (max-width: $mobileW) {
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
 
