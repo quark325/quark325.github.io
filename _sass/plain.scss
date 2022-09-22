@@ -309,6 +309,17 @@ main {
 }
 .post-container {
   padding: 20px 20px 20px 60px;
+  .post-title {
+    font-size: 28px;
+    line-height: 1.2em;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    @media screen and (max-width: $mobileW) {
+      font-size: 24px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+  }
 }
 .post,
 .subtitle {
